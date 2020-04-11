@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ProductManagament</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <%= yield %>
+ <!--    <script>
+    $("#save_product").on("click", function () {
+
+        $.ajax({
+            url: "/save_product",
+            type: "GET",
+            data: $("#save-product-form").serialize(),
+           
+        })
+    })
+</script> -->
+  </body>
+</html>

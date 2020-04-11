@@ -1,0 +1,41 @@
+
+
+
+
+
+
+
+<%= form_with scope: :product,:url => save_product_path,:id => "product-form", local: true do |form| %>
+<!-- <input type="hidden" name="product" value="<%#=@product.id%>"> -->
+  <div class="rTableCell">
+   
+    <%= form.text_field :product_name %>
+  </div>
+<div class="rTableCell">
+
+ <textarea name="product[product_descprition]" id="product_product_descprition"><%=@product.product_descprition%></textarea>
+  </div>
+
+ 
+
+  <div class="rTableCell">
+ 
+    <%= form.text_field :brand_name %>
+  </div>
+
+  <div class="rTableCell", id="<%=@product.id%>">
+     <input type="submit" name="product_id[<%=@product.id%>]" value="Submit ID" data-disable-with="Submit ID">
+  </div>
+<% end %>
+  <!-- <script>
+    $("#<%=@product.id%>").on("click", function () {
+
+     
+       $.ajax({
+            url: "/save_product",
+            type: "GET",
+            data: $("#product-form" + " <%=@product.id%>").serialize(),
+            
+        })
+    })
+</script> -->

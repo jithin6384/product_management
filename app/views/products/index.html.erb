@@ -1,0 +1,29 @@
+
+
+<div class="rTable">
+<div class="rTableRow">
+<div class="rTableHead"><strong>Product Name</strong></div>
+<div class="rTableHead"><span style="font-weight: bold;">Product Description</span></div>
+<div class="rTableHead"><strong>Brand Name</strong></div>
+<div class="rTableHead"><strong>Action</strong></div>
+</div>
+<% @products.each_with_index do |product,index| %>
+ <% @index = index %>
+<div class="rTableRow" id =<%="product_#{@index+1}"%>>
+<div class="rTableCell"><%=product.product_name%></div>
+<div class="rTableCell"><%=product.product_descprition %></div>
+<div class="rTableCell"><%= product.brand_name %></div>
+<div class="rTableCell"><%= link_to "edit",edit_product_path(product,@index), remote: true%>/ delete</div>
+</div>
+<%end%>
+
+
+
+<!-- <div>
+<div>
+<div>Product Name</div>
+<div>Product Description</div>
+<div>Brand Name</div>
+<div>Action</div>
+</div>
+</div> -->

@@ -1,0 +1,6 @@
+<%#= binding.pry %>
+
+$('#product_<%=@index+1%>').bind('ajax:success', function() {
+
+   $('#product_<%=@index+1%>').html("<%= j (render partial: 'edit') %>")
+});
