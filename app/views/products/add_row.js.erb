@@ -1,0 +1,5 @@
+$('#add_row').bind('ajax:success', function() {
+
+   $('#add_row').append("<%= j (render partial: 'add_row') %>")
+});
+

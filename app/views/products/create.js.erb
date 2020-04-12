@@ -1,0 +1,4 @@
+$('.rTableRow').bind('ajax:success', function() {
+
+   $('.rTableRow').append("<%= j (render partial: 'display_table') %>")
+});
